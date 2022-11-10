@@ -44,7 +44,6 @@ class ContactViewController: UIViewController {
             }
             sections.append(alpha)
         }
-        print(dictionary)
     }
 
 }
