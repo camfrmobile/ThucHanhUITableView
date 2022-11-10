@@ -32,6 +32,14 @@ extension ViewController: UITableViewDelegate {
         print(indexPath)
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let contactVC = ContactViewController()
+        present(contactVC, animated: true)
+        
+        return UISwipeActionsConfiguration()
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let moreAction = UIContextualAction(style: .normal, title: "Thêm") { content, view, closure in
